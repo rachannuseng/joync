@@ -3,64 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์ของฉัน (ฝัง Google Site)</title>
+    <title>เว็บไซต์ของฉัน</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
+            margin: 0;
             background-color: #f0f0f0;
+            color: #333;
         }
-        header {
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
             background-color: #007bff;
             color: white;
-            padding: 15px 20px;
-            text-align: center;
-            font-size: 1.5em;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1.05em;
         }
-        .iframe-container {
-            flex-grow: 1; /* ทำให้ iframe container ขยายเต็มพื้นที่ที่เหลือ */
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* อัตราส่วน 16:9 (สูง/กว้าง * 100%) */
-            height: 0;
-            overflow: hidden;
-            background-color: #fff; /* พื้นหลังเผื่อ iframe โหลดช้า */
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none; /* ลบขอบ iframe */
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 0.9em;
-            margin-top: auto; /* ทำให้ footer อยู่ด้านล่างสุด */
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>เว็บไซต์หลักของฉัน</h1>
-    </header>
-
-    <div class="iframe-container">
+    <div class="container">
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน!</h1>
+        <p>คุณสามารถเยี่ยมชม Google Site ของฉันได้ที่นี่:</p>
         <!-- แทนที่ YOUR_GOOGLE_SITE_URL_HERE ด้วยลิงก์ Google Site ของคุณ -->
-        <iframe src="https://script.google.com/macros/s/AKfycbzGeC_-y50WW2lfTZyhdRYlSa2A82e_YKRlWu0sGdxwlDayFXpncUsFCQM8c1I2WWzmhA/exec" title="Google Site ของฉัน"></iframe>
+        <a href="https://script.google.com/macros/s/AKfycbzGeC_-y50WW2lfTZyhdRYlSa2A82e_YKRlWu0sGdxwlDayFXpncUsFCQM8c1I2WWzmhA/exec" target="_blank" class="button">
+            ไปที่ Google Site ของฉัน
+        </a>
     </div>
-
-    <footer>
-        <p>&copy; 2025 เว็บไซต์ของฉัน. สงวนลิขสิทธิ์.</p>
-    </footer>
 </body>
 </html>

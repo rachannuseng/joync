@@ -1,59 +1,10 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์ของฉัน</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #0056b3;
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-size: 1.05em;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน!</h1>
-        <p>คุณสามารถเยี่ยมชม Google Site ของฉันได้ที่นี่:</p>
-        <!-- แทนที่ YOUR_GOOGLE_SITE_URL_HERE ด้วยลิงก์ Google Site ของคุณ -->
-        <a href="https://script.google.com/macros/s/AKfycbzGeC_-y50WW2lfTZyhdRYlSa2A82e_YKRlWu0sGdxwlDayFXpncUsFCQM8c1I2WWzmhA/exec" target="_blank" class="button">
-            ไปที่ Google Site ของฉัน
-        </a>
-    </div>
-</body>
-</html>
+<script>
+fetch("https://script.google.com/macros/s/AKfycbzGeC_-y50WW2lfTZyhdRYlSa2A82e_YKRlWu0sGdxwlDayFXpncUsFCQM8c1I2WWzmhA/exec")
+  .then(res => res.json())
+  .then(data => {
+    document.body.innerHTML += `<p>${data.message}</p>`;
+  })
+  .catch(err => {
+    console.error("เกิดข้อผิดพลาด:", err);
+  });
+</script>

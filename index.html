@@ -1,3 +1,66 @@
-<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world">
-  <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
-</a>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ของฉัน (ฝัง Google Site)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .iframe-container {
+            flex-grow: 1; /* ทำให้ iframe container ขยายเต็มพื้นที่ที่เหลือ */
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* อัตราส่วน 16:9 (สูง/กว้าง * 100%) */
+            height: 0;
+            overflow: hidden;
+            background-color: #fff; /* พื้นหลังเผื่อ iframe โหลดช้า */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* ลบขอบ iframe */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: auto; /* ทำให้ footer อยู่ด้านล่างสุด */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>เว็บไซต์หลักของฉัน</h1>
+    </header>
+
+    <div class="iframe-container">
+        <!-- แทนที่ YOUR_GOOGLE_SITE_URL_HERE ด้วยลิงก์ Google Site ของคุณ -->
+        <iframe src="https://script.google.com/macros/s/AKfycbzGeC_-y50WW2lfTZyhdRYlSa2A82e_YKRlWu0sGdxwlDayFXpncUsFCQM8c1I2WWzmhA/exec" title="Google Site ของฉัน"></iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 เว็บไซต์ของฉัน. สงวนลิขสิทธิ์.</p>
+    </footer>
+</body>
+</html>
